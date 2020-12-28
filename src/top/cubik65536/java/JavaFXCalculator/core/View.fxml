@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--导入JavaFX类-->
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<!--布局控件BorderPane，fx:controller属性用于声明事件处理的Controller，值为Controller类的类全名-->
+<Pane fx:controller="top.cubik65536.java.JavaFXCalculator.core.Controller" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="324.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <!--计算器"显示屏"，TextField元素，不允许用户直接编辑-->
+      <TextField fx:id="display" editable="false" layoutX="14.0" layoutY="14.0" prefHeight="48.0" prefWidth="612.0">
+         <!--重新设置字体-->
+         <font>
+            <Font name="Minecraft" size="21.0" />
+         </font>
+      </TextField>
+      <!--计算器按键-->
+      <!--数字7按键，Button元素-->
+      <!--fx:id属性用于授予该元素一个标示符，用于绑定控制器内的实例-->
+      <!--onAction属性用于用于绑定控制器内的函数，在监听器监听到该按键被触发之后就会调用该函数-->
+      <Button fx:id="button7" layoutX="14.0" layoutY="78.0" mnemonicParsing="false" onAction="#button7Clicked" prefHeight="48.0" prefWidth="48.0" text="7">
+         <font>
+            <Font name="Minecraft" size="21.0" />
+         </font>
+      </Button>
+      <Button fx:id="button8" layoutX="76.0" layoutY="76.0" mnemonicParsing="false" onAction="#button8Clicked" prefHeight="48.0" prefWidth="48.0" text="8">
+         <font>
+            <Font name="Minecraft" size="21.0" />
+         </font>
+      </Button>
+      <Button fx:id="button9" layoutX="138.0" layoutY="76.0" mnemonicParsing="false" onAction="#button9Clicked" prefHeight="48.0" prefWidth="48.0" text="9">
+         <font>
+            <Font name="Minecraft" size="21.0" />
+         </font>
+      </Button>
+      <Button fx:id="button4" layoutX="14.0" layoutY="138.0" mnemonicParsing="false" onAction="#button4Clicked" prefHeight="48.0" prefWidth="48.0" text="4">
+         <font>
+            <Font name="Minecraft" size="21.0" />
+         </font>
+      </Button>
+      <Button fx:id="button5" layoutX="76.0" layoutY="138.0" mnemonicParsing="false" onAction="#button5Clicked" prefHeight="48.0" prefWidth="48.0" text="5">
+         <font>
+            <Font name="Minecraft" size="21.0" />
+         </font>
+      </Button>
+      <Button fx:id="button6" layoutX="138.0" layoutY="138.0" mnemonicParsing="false" onAction="#button6Clicked" prefHeight="48.0" prefWidth="48.0" text="6">
+         <font>
+            <Font name="Minecraft" size="21.0" />
+         </font>
+      </Button>
+      <Button fx:id="button1" layoutX="14.0" layoutY="200.0" mnemonicParsing="false" onAction="#button1Clicked" prefHeight="48.0" prefWidth="48.0" text="1">
+         <font>
+            <Font name="Minecraft" size="21.0" />
+         </font>
+      </Button>
+      <Button fx:id="button2" layoutX="76.0" layoutY="200.0" mnemonicParsing="false" onAction="#button2Clicked" prefHeight="48.0" prefWidth="48.0" text="2">
+         <font>
+            <Font name="Minecraft" size="21.0" />
+         </font>
+      </Button>
+      <Button fx:id="button3" layoutX="138.0" layoutY="200.0" mnemonicParsing="false" onAction="#button3Clicked" prefHeight="48.0" prefWidth="48.0" text="3">
+         <font>
+            <Font name="Minecraft" size="21.0" />
+         </font>
+      </Button>
+      <Button fx:id="button0" layoutX="14.0" layoutY="262.0" mnemonicParsing="false" onAction="#button0Clicked" prefHeight="48.0" prefWidth="110.0" text="0">
+         <font>
+            <Font name="Minecraft" size="21.0" />
+         </font>
+      </Button>
+      <Button fx:id="buttonEquals" layoutX="138.0" layoutY="262.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="48.0" text="=">
+         <font>
+            <Font name="Minecraft" size="21.0" />
+         </font>
+      </Button>
+      <Button fx:id="buttonPlus" layoutX="200.0" layoutY="76.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="48.0" text="+">
+         <font>
+            <Font name="Minecraft" size="21.0" />
+         </font>
+      </Button>
+      <Button fx:id="ButtonMinus" layoutX="200.0" layoutY="138.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="48.0" text="-">
+         <font>
+            <Font name="Minecraft" size="21.0" />
+         </font>
+      </Button>
+      <Button fx:id="buttonMultiply" layoutX="200.0" layoutY="200.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="48.0" text="×">
+         <font>
+            <Font name="Minecraft" size="21.0" />
+         </font>
+      </Button>
+      <Button fx:id="buttonDivision" layoutX="200.0" layoutY="262.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="48.0" text="÷">
+         <font>
+            <Font name="Minecraft" size="21.0" />
+         </font>
+      </Button>
+      <Button fx:id="buttonESC" layoutX="517.0" layoutY="76.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="110.0" text="ESC">
+         <font>
+            <Font name="Minecraft" size="21.0" />
+         </font>
+      </Button>
+      <Button fx:id="buttonClear" layoutX="517.0" layoutY="200.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="110.0" text="C">
+         <font>
+            <Font name="Minecraft" size="21.0" />
+         </font>
+      </Button>
+      <Button fx:id="buttonClearAll" layoutX="517.0" layoutY="138.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="110.0" text="CE">
+         <font>
+            <Font name="Minecraft" size="21.0" />
+         </font>
+      </Button>
+      <Button fx:id="buttonDelete" layoutX="517.0" layoutY="262.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="110.0" text="delete">
+         <font>
+            <Font name="Minecraft" size="21.0" />
+         </font>
+      </Button>
+      <Button fx:id="buttonSquare" layoutX="262.0" layoutY="76.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="48.0" text="²">
+         <font>
+            <Font name="Minecraft" size="21.0" />
+         </font>
+      </Button>
+      <Button fx:id="buttonQuadratic" layoutX="262.0" layoutY="138.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="48.0" text="²√">
+         <font>
+            <Font name="Minecraft" size="21.0" />
+         </font>
+      </Button>
+      <Button fx:id="buttonPower" layoutX="262.0" layoutY="200.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="48.0" text="^">
+         <font>
+            <Font name="Minecraft" size="21.0" />
+         </font>
+      </Button>
+      <Button fx:id="buttonEvolution" layoutX="262.0" layoutY="262.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="48.0" text="√">
+         <font>
+            <Font name="Minecraft" size="21.0" />
+         </font>
+      </Button>
+      <Button fx:id="buttonSin" layoutX="324.0" layoutY="76.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="110.0" text="sin(">
+         <font>
+            <Font name="Minecraft" size="21.0" />
+         </font>
+      </Button>
+      <Button fx:id="buttonTan" layoutX="324.0" layoutY="200.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="110.0" text="tan(">
+         <font>
+            <Font name="Minecraft" size="21.0" />
+         </font>
+      </Button>
+      <Button fx:id="buttonCos" layoutX="324.0" layoutY="138.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="110.0" text="cos(">
+         <font>
+            <Font name="Minecraft" size="21.0" />
+         </font>
+      </Button>
+      <Button fx:id="buttonOpenParaentises" layoutX="448.0" layoutY="200.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="48.0" text="(">
+         <font>
+            <Font name="Minecraft" size="21.0" />
+         </font>
+      </Button>
+      <Button fx:id="buttonCloseParaentises" layoutX="448.0" layoutY="262.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="48.0" text=")">
+         <font>
+            <Font name="Minecraft" size="21.0" />
+         </font>
+      </Button>
+      <Button fx:id="buttonPi" layoutX="448.0" layoutY="76.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="48.0" text="π">
+         <font>
+            <Font name="Minecraft" size="21.0" />
+         </font>
+      </Button>
+      <Button fx:id="buttonE" layoutX="448.0" layoutY="138.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="48.0" text="e">
+         <font>
+            <Font name="Minecraft" size="21.0" />
+         </font>
+      </Button>
+      <Button fx:id="buttonReverse" layoutX="324.0" layoutY="262.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="110.0" text="1/x">
+         <font>
+            <Font name="Minecraft" size="21.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>
